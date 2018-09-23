@@ -7,9 +7,15 @@ class Grid {
     int cols;
     int rows;
 
+    int index(int x, int y);
+
    public:
-    std::vector<int> grid;
     Grid(int cols, int rows);
-    int get(int index);
     ~Grid();
+
+    int get(int x, int y);
+    int getNeighborCount(int x, int y);
+
+    void display();
+    void update();
 };
