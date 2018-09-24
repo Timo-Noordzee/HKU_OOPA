@@ -1,19 +1,22 @@
 #pragma once
 #include <vector>
+#include "Cell.hpp"
+#include "Rule.hpp"
 
 class Grid {
    private:
-    std::vector<int> grid;
+    Rule* rule;
+    std::vector<Cell> grid;
     int cols;
     int rows;
 
     int index(int x, int y);
 
    public:
-    Grid(int cols, int rows);
+    Grid(int cols, int rows, Rule* rule);
     ~Grid();
 
-    int get(int x, int y);
+    Cell get(int x, int y);
     int getNeighborCount(int x, int y);
 
     void display();
