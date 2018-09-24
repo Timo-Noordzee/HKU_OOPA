@@ -6,7 +6,7 @@
 class Grid {
    private:
     Rule* rule;
-    std::vector<Cell> grid;
+    std::vector<Cell*> grid;
     int cols;
     int rows;
 
@@ -16,9 +16,10 @@ class Grid {
     Grid(int cols, int rows, Rule* rule);
     ~Grid();
 
-    Cell get(int x, int y);
+    Cell* get(int x, int y);
     int getNeighborCount(int x, int y);
 
     void display();
     void update();
+    void deleteCells();
 };
