@@ -44,7 +44,7 @@ int Grid::index(int x, int y) {
 void Grid::display() {
     for (int y = 0; y < rows; y++) {                           //Loop all rows in the grid
         for (int x = 0; x < cols; x++) {                       //Loop all cells in the row
-            std::cout << (get(x, y)->getState() ? "*" : " ");  //Echo * if the cell is alive, otherwise echo a whitespace
+            std::cout << (get(x, y)->getState() ? "x" : " ");  //Echo * if the cell is alive, otherwise echo a whitespace
         }
         std::cout << std::endl;
     }

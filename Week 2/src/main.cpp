@@ -7,7 +7,7 @@
 #include "RuleBase.hpp"
 #include "RuleOverpopulation.hpp"
 
-const int cols = 25;
+const int cols = 50;
 const int rows = 25;
 
 Grid* grid;
